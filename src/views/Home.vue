@@ -4,10 +4,10 @@
     <section>
       <h2>2 December</h2>
       <div class="grid-wrapper">
-        <article v-for="index in 8" :key="index">
+        <article v-for="(item, index) in data" :key="index">
           <h3>9:00 AM</h3>
-          <p>Life finds a way. You know what? It is beets. </p>
-          <img src="https://images.fineartamerica.com/images-medium-large-5/maroon-bells-aspen-colorado-black-and-white-photography-by-sai.jpg" alt="Black and white photo of a lake">
+          <p>{{ item.description }}</p>
+          <img :src="require(`@/data/images/${item.file}`)">
         </article>
       </div>
     </section>
@@ -26,9 +26,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { data } from '@/data/index'
 
 export default defineComponent({
-  name: 'Home'
+  name: 'Home',
+  data () {
+    return {
+      data
+    }
+  }
 })
 </script>
 
