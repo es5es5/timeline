@@ -11,6 +11,16 @@
         </article>
       </div>
     </section>
+    <section>
+      <h2>2 December</h2>
+      <div class="grid-wrapper">
+        <article v-for="index in 8" :key="index">
+          <h3>9:00 AM</h3>
+          <p>Life finds a way. You know what? It is beets. </p>
+          <img src="https://images.fineartamerica.com/images-medium-large-5/maroon-bells-aspen-colorado-black-and-white-photography-by-sai.jpg" alt="Black and white photo of a lake">
+        </article>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -51,6 +61,7 @@ main{
 h1{
   font-family:  $header-font;
 }
+
 h2{
   color: #ed666f;
   font-family: $header-font;
@@ -61,6 +72,10 @@ h3{
   font-family: $header-font;
   font-weight: 500;
   margin: 0.5rem 0;
+}
+
+section {
+  margin-bottom: 5rem;
 }
 
 article{
